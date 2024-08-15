@@ -19,22 +19,22 @@ function calculateWeight(earthWeight) {
         // Make sure the values are floats to two decimals
     }
     // return the planetWeights object from the function
-    for (let planet in planetWEights) {
-        console.log('Your weight on'{
-            planetWeights[planet]kg');
+    // console.log(planetWeights);
+}
+function getUserWeight() {
+    console.log("Enter your weight in kg");
+    const userWeight = prompt(">");
+    console.log("Your weight is:", userWeight);
+    // create a method to take the user weight
+    planetWeights = {}
+    for (let planet in gravityFactors) {
+        planetWeights[planet] = parseFloat((userWeight * gravityFactors[planet]).toFixed(2));
+        console.log(`Your weight on ${planet} is: ${planetWeights[planet]}kg`);
     }
 
 }
-    function getUserWeight() {
-        console.log("Enter your weight in kg");
-        const userWeight = prompt(">");
-        console.log("Your weight is:", userWeight);
-        // create a method to take the user weight
-        // and log the weight on other planets
-        console.log("Your weight on other planets is:");
-        calculateWeight(userWeight);
-    }
-    global.getUserWeight = getUserWeight;
+global.getUserWeight = getUserWeight;
+global.calculateWeight = calculateWeight;
 // console.log("Your weight on other planets is:");
 // console.log(calculateWeight(100));
 // console log the planetWeights assume the function
