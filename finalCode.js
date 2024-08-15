@@ -10,8 +10,14 @@ function showUserFactors(type, value) {
     }
     switch (type) {
         case 'jump':
-
-        case 'weight':
+            measurment = "cm"
+            break;
         
+        case 'weight':
+            measurment = "kg"
+            break;
+
+        default:
+            break
     }
  }
