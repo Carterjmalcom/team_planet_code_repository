@@ -25,5 +25,13 @@ function showUserFactors(type, value) {
     }
     
 }
- 
+function getUserInput() {
+    typeInput = prompt("Enter Type> ")
+    valueInput = prompt("Enter Value> ")
+    showUserFactors(typeInput, valueInput)
+
+}
+
+
 global.showUserFactors = showUserFactors
+global.getUserInput = getUserInput
