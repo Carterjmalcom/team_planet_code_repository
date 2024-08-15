@@ -39,7 +39,7 @@ global.calculateWeight = calculateWeight;
 // console.log(calculateWeight(100));
 // console log the planetWeights assume the function
 // is passed in an earthWeight of 100(kg)
-
+// 
 // make a comment at the bottom of the script
 // telling a user how to run the script from node
 // run in the terminal `node calculateWeight.js`
