@@ -20,6 +20,10 @@ function showUserFactors(type, value) {
         default:
             break
     }
+    for (let planet in results) { 
+        console.log(`Your ${type} on ${planet} is ${results[planet]}${measurment}.`)
+    }
+    
 }
  
 global.showUserFactors = showUserFactors
