@@ -1,4 +1,4 @@
-const prompt = require('node-sync')();
+const prompt = require('prompt-sync')();
 
 const gravityFactors = require('./utils/earthGravityFactors.js');
 
@@ -20,4 +20,6 @@ function showUserFactors(type, value) {
         default:
             break
     }
- }
+}
+ 
+global.showUserFactors = showUserFactors
