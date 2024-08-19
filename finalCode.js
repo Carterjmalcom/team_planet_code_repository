@@ -48,28 +48,33 @@ function showUserFactors(type, system, value, planets) {
     }
 
 }
-function getUserInput() {
-    while (true) {
-        typeInput = prompt("Enter Type (jump, weight, pushups >> ").trim().toLowerCase()
-        if (typeInput === "jump" || typeInput === "weight" || typeInput === "pushups") {
 
-            break
+const words = ["jump", "weight", "pushups", "metric", "imperial"]
+var typeBool = true
+
+function getUserInput() {
+    typeOuter: while (true) {
+        typeInput = prompt("Enter Type (jump, weight, pushups >> ").trim().toLowerCase()
+        for (var i = 0; i < words.length - 1; i++) {
+            if (typeInput == words[i]) {
+                break typeOuter
+            }
         }
-        else {
-            console.log('Retry')
-        }
+        console.log('Retry')
     }
-    while (true) {
+
+    systemOuter: while (true) {
         if (typeInput === "pushups") {
             break
         }
         systemInput = prompt("Enter System (metric, imperial) >> ").trim().toLowerCase()
-        if (systemInput === "metric" || systemInput === "imperial") {
-            break
+        for (var i = 0; i < words.length - 1; i++) {
+            if (systemInput == words[i]) {
+                break systemOuter
+            }
         }
-        else {
             console.log('Retry')
-        }
+        
 
     }
     while (true) {
