@@ -79,7 +79,7 @@ function getUserInput() {
     }
     while (true) {
         valueInput = prompt("Enter Value (amount of unit) >> ")
-        if (!isNaN(valueInput)) {
+        if (!isNaN(valueInput)&&valueInput<1000&&valueInput>0) {
             break
         }
         else {
