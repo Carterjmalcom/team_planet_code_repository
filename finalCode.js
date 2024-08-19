@@ -55,7 +55,7 @@ var typeBool = true
 function getUserInput() {
     typeOuter: while (true) {
         typeInput = prompt("Enter Type (jump, weight, pushups >> ").trim().toLowerCase()
-        for (var i = 0; i < words.length - 1; i++) {
+        for (var i = 0; i < words.length; i++) {
             if (typeInput == words[i]) {
                 break typeOuter
             }
@@ -68,7 +68,7 @@ function getUserInput() {
             break
         }
         systemInput = prompt("Enter System (metric, imperial) >> ").trim().toLowerCase()
-        for (var i = 0; i < words.length - 1; i++) {
+        for (var i = 0; i < words.length; i++) {
             if (systemInput == words[i]) {
                 break systemOuter
             }
@@ -86,8 +86,17 @@ function getUserInput() {
             console.log('Retry')
         }
 
+
     }
-    planetsInput = prompt("Enter Solar System (1, 2) >> ")
+
+    while (true) {
+        planetsInput = prompt("Enter Solar System (1, 2) >> ")
+        if (planetsInput == 1 || planetsInput == 2) {
+            break
+        } else {
+            console.log("Retry")
+         }
+    }
     showUserFactors(typeInput, systemInput, valueInput, planetsInput)
 
 }
